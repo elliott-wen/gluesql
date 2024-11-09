@@ -1476,6 +1476,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "gluesql-quickjs"
+version = "0.16.2"
+dependencies = [
+ "async-trait",
+ "console_error_panic_hook",
+ "gloo-utils 0.1.7",
+ "gluesql-core",
+ "gluesql-test-suite",
+ "gluesql_memory_storage",
+ "js-sys",
+ "serde",
+ "serde_json",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "wasm-bindgen-test",
+]
+
+[[package]]
 name = "gluesql-redis-storage"
 version = "0.16.2"
 dependencies = [
