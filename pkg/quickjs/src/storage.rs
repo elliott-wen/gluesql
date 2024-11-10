@@ -11,6 +11,8 @@ use {
         },
     },
     wasm_bindgen::prelude::*,
+    wasm_bindgen_futures::JsFuture,
+    js_sys::Promise,
 };
 
 #[derive(Debug, Clone, Default)]
@@ -23,6 +25,8 @@ extern "C" {
     // Import a JavaScript function
     #[wasm_bindgen(js_namespace = console)]
     fn log(s: &str);
+
+    fn fetch_schema(table_name: &str) -> Promise;
 }
 
 #[async_trait(?Send)]
@@ -35,7 +39,11 @@ impl Store for QuickjsStorage {
     }
 
     async fn fetch_schema(&self, table_name: &str) -> Result<Option<Schema>> {
-        log(format!("fetch_schema not implemented: {table_name}").as_str());
+        
+        let js_promise = fetch_schema(table_name);
+        let js_value = JsFuture::from(js_promise).await.unwrap();
+        let schema: Option<Schema> = serde_wasm_bindgen::from_value(js_value).unwrap();
+
         Err(Error::StorageMsg(
             "[QuickjsStorage] not implemented".to_owned(),
         ))

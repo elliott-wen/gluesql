@@ -20,7 +20,7 @@ nodejs = ["console_error_panic_hook"]
 [dependencies]
 gluesql-core.workspace = true
 gluesql_memory_storage.workspace = true
-wasm-bindgen = { version = "0.2.79" }
+wasm-bindgen = { version = "0.2.95" }
 wasm-bindgen-futures = "0.4.29"
 js-sys = "0.3"
 async-trait = "0.1"

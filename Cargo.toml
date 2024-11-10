@@ -15,8 +15,6 @@ default-members = [
   "cli",
   "core",
   "pkg/rust",
-  "pkg/quickjs",
-  "pkg/python",
   "storages/*",
   "test-suite",
   "utils",
@@ -41,6 +39,7 @@ gluesql-core = { path = "./core", version = "0.16.2" }
 cli = { package = "gluesql-cli", path = "./cli", version = "0.16.2" }
 test-suite = { package = "gluesql-test-suite", path = "./test-suite", version = "0.16.2" }
 gluesql_memory_storage = { path = "./storages/memory-storage", version = "0.16.2" }
+gluesql_simplified_memory_storage = { path = "./storages/memory-storage", version = "0.16.2" }
 gluesql-shared-memory-storage = { path = "./storages/shared-memory-storage", version = "0.16.2" }
 gluesql_sled_storage = { path = "./storages/sled-storage", version = "0.16.2" }
 gluesql-json-storage = { path = "./storages/json-storage", version = "0.16.2" }
