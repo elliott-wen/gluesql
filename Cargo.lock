@@ -1582,6 +1582,7 @@ dependencies = [
  "gluesql-core",
  "gluesql-test-suite",
  "serde",
+ "serde_json",
  "tokio",
 ]
 
