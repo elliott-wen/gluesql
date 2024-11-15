@@ -42,7 +42,7 @@ impl Store for QuickjsStorage {
         
         let js_promise = fetch_schema(table_name);
         let js_value = JsFuture::from(js_promise).await.unwrap();
-        let schema: Option<Schema> = serde_wasm_bindgen::from_value(js_value).unwrap();
+        let _schema: Option<Schema> = serde_wasm_bindgen::from_value(js_value).unwrap();
 
         Err(Error::StorageMsg(
             "[QuickjsStorage] not implemented".to_owned(),

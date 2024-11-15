@@ -1487,6 +1487,7 @@ dependencies = [
  "gluesql_memory_storage",
  "js-sys",
  "serde",
+ "serde-wasm-bindgen",
  "serde_json",
  "wasm-bindgen",
  "wasm-bindgen-futures",
@@ -1570,19 +1571,6 @@ dependencies = [
  "gluesql-core",
  "gluesql-test-suite",
  "serde",
- "tokio",
-]
-
-[[package]]
-name = "gluesql_simplified_memory_storage"
-version = "0.16.2"
-dependencies = [
- "async-trait",
- "futures",
- "gluesql-core",
- "gluesql-test-suite",
- "serde",
- "serde_json",
  "tokio",
 ]
 
